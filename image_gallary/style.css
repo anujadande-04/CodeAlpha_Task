@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #F7CFD8;
+}
+
+.header, .footer {
+  background-color: #E69DB8;
+  color: white;
+  height: 120px;
+  font-size: 36px; 
+  text-align: center;
+  padding: 30px 0; 
+}
+
+.footer {
+  margin-top: auto; 
+}
+
+/* Gallery section wrapper */
+.image-section {
+  background-color: #e1e0dc;
+  padding: 20px;
+  flex: 1;
+  box-shadow: #070707;
+}
+
+/* Ensure row spacing works well */
+.image-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Image styling inside the image sections */
+.image-section img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 2px solid #070707;
+}
+
+.image-section img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 70%;
+  max-height: 70%;
+  border-radius: 10px;
+}
